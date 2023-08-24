@@ -1,0 +1,4 @@
+{
+  "name": "devcontainer-ci-test",
+  "packageManager": "yarn@3.6.3"
+}

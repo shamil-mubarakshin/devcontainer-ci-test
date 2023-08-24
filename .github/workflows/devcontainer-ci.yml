@@ -1,0 +1,17 @@
+name: Dev Container CI
+
+on:
+  push:
+
+jobs:
+  verify:
+    name: "Verify"
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install devcontainer CLI
+        run: npm install --location=global @devcontainers/cli
+      - name: Build and run dev container
+        run: devcontainer up --workspace-folder . --remove-existing-container --build-no-cache --log-level trace
