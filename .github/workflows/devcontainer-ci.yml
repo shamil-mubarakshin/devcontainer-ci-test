@@ -37,7 +37,7 @@ jobs:
       #     sudo systemctl is-enabled --quiet docker.service || sudo systemctl enable docker.service
 
       - name: Install devcontainer CLI
-        run: npm install --location=global @devcontainers/cli
+        run: npm install --location=global @devcontainers/cli@0.50.2
 
       # - run: |
       #     ls -la
