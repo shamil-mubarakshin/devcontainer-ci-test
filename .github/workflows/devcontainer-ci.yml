@@ -21,7 +21,7 @@ jobs:
           curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o $gpg_key
           echo "deb [arch=amd64 signed-by=$gpg_key] $repo_url "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | sudo tee $repo_path
           sudo apt-get update
-          sudo apt-get remove -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
+          sudo apt-get purge -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
           
           sudo rm /usr/libexec/docker/cli-plugins/docker-compose
           sudo rm $gpg_key
