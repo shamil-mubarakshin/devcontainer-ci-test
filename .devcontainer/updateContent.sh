@@ -8,10 +8,12 @@ export CI=true
 export NO_COLOR=1
 
 # Debugging
-pwd
-whoami
-ls -la
-ls -la /workspaces/devcontainer-ci-test
-ls -la /workspaces/devcontainer-ci-test/.yarn
+pwd || true
+groups || true
+id || true
+whoami || true
+ls -la || true
+ls -la /workspaces/devcontainer-ci-test || true
+ls -la /workspaces/devcontainer-ci-test/.yarn || true
 
 yarn install --immutable
