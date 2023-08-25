@@ -27,5 +27,8 @@ jobs:
       - name: Install devcontainer CLI
         run: npm install --location=global @devcontainers/cli
 
+      - run: |
+          ls -la
+
       - name: Build and run dev container
-        run: sudo devcontainer up --workspace-folder . --remove-existing-container --build-no-cache --log-level trace
+        run: devcontainer up --workspace-folder . --remove-existing-container --build-no-cache --log-level trace
