@@ -28,4 +28,4 @@ jobs:
         run: npm install --location=global @devcontainers/cli
 
       - name: Build and run dev container
-        run: devcontainer up --workspace-folder . --remove-existing-container --build-no-cache --log-level trace
+        run: sudo devcontainer up --workspace-folder . --remove-existing-container --build-no-cache --log-level trace
