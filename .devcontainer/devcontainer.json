@@ -6,39 +6,4 @@
   "workspaceFolder": "/workspaces/devcontainer-ci-test",
   "updateContentCommand": ["/bin/bash", ".devcontainer/updateContent.sh"],
   "remoteUser": "node"
-//  "customizations": {
-//    "vscode": {
-//      "settings": {},
-//      "extensions": [
-//        "Prisma.prisma",
-//        "bungcip.better-toml",
-//        "dbaeumer.vscode-eslint",
-//        "ms-azuretools.vscode-docker",
-//        "redhat.vscode-yaml",
-//        "esbenp.prettier-vscode",
-//        "bradlc.vscode-tailwindcss"
-//      ]
-//    }
-//  },
-//  "containerEnv": {
-//    "API_SERVER_URL": "http://localhost:8080"
-//  },
-//
-//  "features": {
-//    "ghcr.io/devcontainers/features/aws-cli": {},
-//    "ghcr.io/devcontainers/features/desktop-lite": {},
-//    "ghcr.io/devcontainers/features/docker-in-docker": {
-//      "dockerDashComposeVersion": "v2",
-//      "moby": false
-//    },
-//    "ghcr.io/devcontainers/features/github-cli": {},
-//    "ghcr.io/devcontainers/features/sshd": {},
-//    "ghcr.io/devcontainers/features/terraform": {}
-//  },
-//
-//  "hostRequirements": {
-//    "cpus": 8,
-//    "memory": "16gb",
-//    "storage": "64gb"
-//  }
 }
