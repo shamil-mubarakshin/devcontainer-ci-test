@@ -5,5 +5,5 @@
   },
   "workspaceFolder": "/workspaces/devcontainer-ci-test",
   "updateContentCommand": ["/bin/bash", ".devcontainer/updateContent.sh"],
-  "remoteUser": "runner"
+  "remoteUser": "node"
 }
