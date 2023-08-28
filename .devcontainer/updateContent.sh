@@ -16,4 +16,4 @@ ls -la || true
 ls -la /workspaces/devcontainer-ci-test || true
 ls -la /workspaces/devcontainer-ci-test/.yarn || true
 
-yarn install --immutable
+sudo yarn install --immutable
