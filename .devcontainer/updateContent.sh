@@ -10,6 +10,7 @@ export NO_COLOR=1
 # Debugging
 pwd || true
 groups || true
+cat /etc/group
 id || true
 whoami || true
 ls -la || true
