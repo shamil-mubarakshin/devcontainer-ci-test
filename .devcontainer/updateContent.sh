@@ -11,6 +11,7 @@ export NO_COLOR=1
 pwd || true
 groups || true
 cat /etc/group
+lslogins -u
 id || true
 whoami || true
 ls -la || true
