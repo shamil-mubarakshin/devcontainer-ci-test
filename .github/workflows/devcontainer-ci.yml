@@ -7,7 +7,7 @@ on:
 jobs:
   verify:
     name: "Verify"
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     timeout-minutes: 30
 
     steps:
@@ -23,31 +23,31 @@ jobs:
           whoami
           ls -la
 
-      - run: |
-          repo_url="https://download.docker.com/linux/ubuntu"
-          gpg_key="/usr/share/keyrings/docker.gpg"
-          repo_path="/etc/apt/sources.list.d/docker.list"
+      # - run: |
+      #     repo_url="https://download.docker.com/linux/ubuntu"
+      #     gpg_key="/usr/share/keyrings/docker.gpg"
+      #     repo_path="/etc/apt/sources.list.d/docker.list"
           
-          curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o $gpg_key
-          echo "deb [arch=amd64 signed-by=$gpg_key] $repo_url "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | sudo tee $repo_path
-          sudo apt-get update
-          sudo rm /usr/libexec/docker/cli-plugins/docker-compose
-          sudo apt-get purge -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
+      #     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o $gpg_key
+      #     echo "deb [arch=amd64 signed-by=$gpg_key] $repo_url "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | sudo tee $repo_path
+      #     sudo apt-get update
+      #     sudo rm /usr/libexec/docker/cli-plugins/docker-compose
+      #     sudo apt-get purge -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
           
-          sudo rm $gpg_key
-          sudo rm $repo_path
-          # sudo apt-get install --no-install-recommends docker-ce-rootless-extras
+      #     sudo rm $gpg_key
+      #     sudo rm $repo_path
+      #     # sudo apt-get install --no-install-recommends docker-ce-rootless-extras
 
-          # sudo systemctl is-active --quiet docker.service || sudo systemctl start docker.service
-          # sudo systemctl is-enabled --quiet docker.service || sudo systemctl enable docker.service
+      #     # sudo systemctl is-active --quiet docker.service || sudo systemctl start docker.service
+      #     # sudo systemctl is-enabled --quiet docker.service || sudo systemctl enable docker.service
 
-          sudo apt-get update
-          sudo apt-get install -y moby-engine moby-cli
-          sudo apt-get install --no-install-recommends -y moby-buildx
-          sudo apt-get install -y moby-compose
+      #     sudo apt-get update
+      #     sudo apt-get install -y moby-engine moby-cli
+      #     sudo apt-get install --no-install-recommends -y moby-buildx
+      #     sudo apt-get install -y moby-compose
 
-          sudo systemctl is-active --quiet docker.service || sudo systemctl start docker.service
-          sudo systemctl is-enabled --quiet docker.service || sudo systemctl enable docker.service
+      #     sudo systemctl is-active --quiet docker.service || sudo systemctl start docker.service
+      #     sudo systemctl is-enabled --quiet docker.service || sudo systemctl enable docker.service
 
       - name: Install devcontainer CLI
         run: npm install --location=global @devcontainers/cli@0.50.2
