@@ -13,6 +13,7 @@ groups || true
 id || true
 whoami || true
 ls -la || true
+ls -la /workspaces || true
 ls -la /workspaces/devcontainer-ci-test || true
 ls -la /workspaces/devcontainer-ci-test/.yarn || true
 
