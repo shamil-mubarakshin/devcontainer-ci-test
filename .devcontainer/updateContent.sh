@@ -15,6 +15,7 @@ lslogins -u
 id || true
 whoami || true
 ls -la || true
+chmod -R 765 /workspaces/devcontainer-ci-test
 ls -la /workspaces || true
 ls -la /workspaces/devcontainer-ci-test || true
 ls -la /workspaces/devcontainer-ci-test/.yarn || true
