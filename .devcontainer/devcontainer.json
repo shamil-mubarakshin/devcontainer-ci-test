@@ -4,5 +4,8 @@
     "dockerfile": "Dockerfile"
   },
   "workspaceFolder": "/workspaces/devcontainer-ci-test",
-  "updateContentCommand": ["/bin/bash", ".devcontainer/updateContent.sh"]
+  "updateContentCommand": ["/bin/bash", ".devcontainer/updateContent.sh"],
+  "remoteUser": "node",
+  "containerUser": "node",
+  "updateRemoteUserUID": true
 }
