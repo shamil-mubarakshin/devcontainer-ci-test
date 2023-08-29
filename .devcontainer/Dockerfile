@@ -3,3 +3,4 @@
 # https://www.debian.org/releases/
 FROM mcr.microsoft.com/devcontainers/javascript-node:1-18-bookworm
 
+RUN delgroup npm
