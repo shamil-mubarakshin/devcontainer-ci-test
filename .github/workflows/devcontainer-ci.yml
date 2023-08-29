@@ -52,10 +52,10 @@ jobs:
       - name: Install devcontainer CLI
         run: npm install --location=global @devcontainers/cli
 
-      - name: Change docker group ID
-        run: |
-          sudo groupmod -g 997 docker
-          sudo systemctl restart docker
+      # - name: Change docker group ID
+      #   run: |
+      #     sudo groupmod -g 997 docker
+      #     sudo systemctl restart docker
 
       - name: Build and run dev container
         run: devcontainer up --workspace-folder . --remove-existing-container --build-no-cache --log-level trace
